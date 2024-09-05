@@ -27,6 +27,17 @@
   --primary-03-black: rgba(24, 24, 24, 1);
   --secondary-01-lightgrey: rgba(245, 245, 245, 1);
   --secondary-02-white: rgba(255, 255, 255, 1);
+  --secondary-03-grey: rgba(89, 85, 102, 1);
+
+  /*tekst størrelse*/
+  --size--2: clamp(0.3472rem, -0.0225rem + 1.5774vw, 1.2rem);
+  --size--1: clamp(0.4167rem, -0.053rem + 2.0039vw, 1.5rem);
+  --size-0: clamp(0.5rem, -0.0961rem + 2.5434vw, 1.875rem);
+  --size-1: clamp(0.6rem, -0.156rem + 3.2254vw, 2.3438rem);
+  --size-2: clamp(0.72rem, -0.238rem + 4.0873vw, 2.9297rem);
+  --size-3: clamp(0.864rem, -0.3491rem + 5.1757vw, 3.6621rem);
+  --size-4: clamp(1.0368rem, -0.4982rem + 6.5495vw, 4.5776rem);
+  --size-5: clamp(1.2442rem, -0.6971rem + 8.2828vw, 5.722rem);
 }
 
 /* Typografiske elementer */
