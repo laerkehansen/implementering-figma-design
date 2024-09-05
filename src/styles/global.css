@@ -1,0 +1,36 @@
+/* Globale spacing-variabler */
+:root {
+  --flow-space: 1.5rem; /* Standard flow-space */
+  --flow-space-small: 1rem;
+  --flow-space-large: 2rem;
+
+  /* Standart colors*/
+  --primary-01-yellow: rgba(255, 204, 74, 1);
+  --primary-02-green: rgba(78, 175, 78, 1);
+  --primary-03-black: rgba(24, 24, 24, 1);
+  --secondary-01-lightgrey: rgba(245, 245, 245, 1);
+  --secondary-02-white: rgba(255, 255, 255, 1);
+}
+
+/* Typografiske elementer */
+h1 {
+  margin-bottom: var(--flow-space-large); /* Mere plads under h1 */
+}
+
+h2 {
+  margin-bottom: var(--flow-space); /* Standard spacing */
+}
+
+h3 {
+  margin-bottom: var(--flow-space-small); /* Mindre plads under h3 */
+}
+
+/* Generel paragraph styling */
+p {
+  margin-bottom: var(--flow-space); /* Samme flow-space mellem afsnit */
+}
+
+/* Ekstra spacing mellem sektioner */
+section {
+  padding: var(--flow-space-large) 0;
+}
