@@ -1,16 +1,28 @@
 ---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/reset.css";
+import { Image } from "astro:assets";
+import EmployeeSection from "../components/EmployeeCard.astro";
+import EmployeeCard from "../components/EmployeeCard.astro";
+import EmployeeContainer from "../components/EmployeeContainer.astro";
 
+const employeeData = await fetch(
+  "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
+
+const coreValuesdata = await fetch(
+  "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/corevalues.json"
+).then((res) => res.json());
+
+const projectionsdata = await fetch(
+  "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/projections.json"
+).then((res) => res.json());
+
+const title = "hej";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title}>
+  <!-- <EmployeeSection data={employeeData} /> -->
+  <EmployeeContainer data={employeeData} />
+</BaseLayout>
