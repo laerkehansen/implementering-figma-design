@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import Login from "./Login.astro";
+---
+
+<header>
+  <div>
+    <a href="/">AskExperts</a>
+  </div>
+  <ul>
+    <li>Home</li>
+    <li>Case Study</li>
+    <li>Team</li>
+    <li>About</li>
+  </ul>
+  <Login />
+</header>
+
+<style>
+  header {
+    background-color: var(--primary-03-black);
+    display: flex;
+    justify-content: space-around;
+    color: var(--secondary-02-white);
+    padding: 2.38rem;
+    text-align: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 1.8rem;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: var(--size-1);
+      color: var(--secondary-02-white);
+    }
+  }
+</style>
