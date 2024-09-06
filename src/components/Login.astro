@@ -19,6 +19,13 @@ import "../styles/global.css";
 
 <style>
   @layer overrides {
+    button {
+      background-color: var(--primary-01-yellow);
+      padding: 0.25rem 1rem;
+      border-radius: 1.25rem;
+      color: var(--primary-03-black);
+    }
+
     [popover]::backdrop {
       background-color: var(--primary-03-black);
       opacity: 0.7;
@@ -56,7 +63,7 @@ import "../styles/global.css";
         padding: 10px 15px;
         margin-top: 20px;
         background-color: #f5c542;
-        color: #1c1c1c;
+        color: var(--primary-03-black);
         border: none;
         border-radius: 50px;
         font-size: 16px;

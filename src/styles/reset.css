@@ -139,8 +139,8 @@ button,
 textarea,
 select {
   font: inherit;
-  border-radius: 0;
-  color: inherit;
+  /* border-radius: 0; */
+  /* color: inherit; */
   font-size: max(1em, 16px);
 }
 
