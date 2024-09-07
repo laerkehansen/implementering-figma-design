@@ -1,0 +1,66 @@
+---
+import "../styles/global.css";
+import "../layouts/BaseLayout.astro";
+---
+
+<div class="newsletter">
+  <div class="tekst">
+    <h2>Subscribe Our Newsletter</h2>
+    <p>Build stronger Customer Relationships with Consultalk</p>
+  </div>
+  <div class="form">
+    <form action="/subscribe">
+      <input type="email" placeholder="Your Email Address" required />
+      <input type="submit" value="Subscribe" id="Login" />
+    </form>
+  </div>
+</div>
+
+<style>
+  .newsletter {
+    background-color: var(--primary-03-black);
+    color: var(--secondary-02-white);
+    max-width: 75rem;
+    border-radius: 1rem;
+    align-items: center;
+    padding: 5rem;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+
+    .tekst {
+      h2 {
+        font-size: var(--size-1);
+        font-weight: bold;
+      }
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      input[type="email"] {
+        padding: 10px 20px;
+        width: 250px;
+        border: 2px solid #cccccc;
+        border-radius: 1rem;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        width: fit-content;
+        border-radius: 1rem;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+        background-color: var(--primary-01-yellow);
+        border: 2px solid var(--primary-01-yellow);
+      }
+    }
+  }
+</style>
