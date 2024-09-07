@@ -1,0 +1,92 @@
+---
+import "../styles/global.css";
+---
+
+<div class="bigPhoto">
+  <div class="text_grid">
+    <div class="text_front">
+      <h1>Adam Buschemia Business Consultant</h1>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <a href="/src/pages/about">Book a Meeting</a>
+    </div>
+  </div>
+  <img src="src/assets/images/index.jpg" alt="" />
+</div>
+<style>
+  .bigPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    z-index: 3;
+  }
+  .text_grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 100px));
+    grid-template-rows: repeat(3, auto);
+    gap: 1.25rem;
+    align-items: flex-start;
+    background-color: var(--primary-03-black);
+    color: var(--secondary-02-white);
+    z-index: 1;
+    a {
+      text-decoration: none;
+      padding: 1rem 1.9375rem;
+      color: var(--primary-03-black);
+      background-color: var(--secondary-02-white);
+      border-radius: 2.6rem;
+      max-width: fit-content;
+    }
+
+    h1 {
+      font-size: var(--size-2);
+      font-family: sans-serif;
+      color: var(--secondary-02-white);
+    }
+  }
+
+  .text_front {
+    display: grid;
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    gap: 1.25rem;
+  }
+  .text_grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16.4rem; /* Bredden af mønstret */
+    height: 16.4rem; /* Højden af mønstret */
+    background-image: radial-gradient(
+      circle,
+      #d4a473 2px,
+      transparent 2px
+    ); /* Prikket mønster */
+    background-size: 20px 20px; /* Juster afstand mellem prikker */
+    opacity: 0.7; /* Gennemsigtighed */
+    z-index: -1;
+    translate: -40px 150px;
+  }
+  .bigPhoto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16.4rem; /* Bredden af mønstret */
+    height: 16.4rem; /* Højden af mønstret */
+    background-image: radial-gradient(
+      circle,
+      #d4a473 2px,
+      transparent 2px
+    ); /* Prikket mønster */
+    background-size: 20px 20px; /* Juster afstand mellem prikker */
+    opacity: 0.7; /* Gennemsigtighed */
+    z-index: 2;
+    translate: 630px -120px;
+  }
+</style>

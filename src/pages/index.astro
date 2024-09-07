@@ -8,6 +8,7 @@ import EmployeeCard from "../components/EmployeeCard.astro";
 import EmployeeContainer from "../components/EmployeeContainer.astro";
 import Login from "../components/Login.astro";
 import Circles from "../components/Circles.astro";
+import HeaderPhoto from "../components/HeaderPhoto.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
@@ -25,6 +26,7 @@ const title = "hej";
 ---
 
 <BaseLayout title={title}>
+  <HeaderPhoto />
   <Login />
   <Circles />
   <!-- <EmployeeSection data={employeeData} /> -->

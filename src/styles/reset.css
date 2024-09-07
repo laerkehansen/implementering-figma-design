@@ -24,6 +24,14 @@ body {
   min-height: 100svh;
 }
 
+header,
+footer,
+main,
+section,
+article {
+  container-type: inline-size;
+}
+
 ol[role="list"],
 ul[role="list"] {
   list-style: none;
@@ -63,7 +71,10 @@ h6 {
   margin: 0;
 }
 
-p {
+p,
+li,
+figcaption {
+  max-width: 65ch;
   text-wrap: pretty;
 }
 
@@ -139,8 +150,6 @@ button,
 textarea,
 select {
   font: inherit;
-  /* border-radius: 0; */
-  /* color: inherit; */
   font-size: max(1em, 16px);
 }
 
