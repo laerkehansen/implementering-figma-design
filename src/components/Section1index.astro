@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+---
+
+<div class="grid_1-1">
+  <div class="img">
+    <img src="src/assets/images/photosection1.jpg" alt="mand i fokus" />
+  </div>
+  <div class="text_grid">
+    <p>We'll work with you</p>
+    <h2>What To Expect</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+    <ul>
+      <li>
+        Bring to the table win-win survival strategies to ensure proactive
+        domination. At the end of the day.
+      </li>
+      <li>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity to beta test override the digital.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5.125rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .text_grid {
+    display: grid;
+    gap: var(--flow-space);
+
+    p:first-child {
+      background-color: var(--primary-01-yellow);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      border-radius: 2rem;
+    }
+
+    h2 {
+      font-size: var(--size-2);
+      font-weight: 700;
+    }
+  }
+
+  img {
+    border-radius: 2rem;
+  }
+</style>
