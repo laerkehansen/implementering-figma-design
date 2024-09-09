@@ -13,6 +13,8 @@ import Newsletter from "../components/Newsletter.astro";
 import Section1Index from "../components/Section1index.astro";
 import FinancialProjections from "../components/FinancialProjections.astro";
 import Yellowcircles from "../components/Yellowcircles.astro";
+import CoreValues from "../components/Core-values.astro";
+import { Icon } from "astro-icon/components";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
@@ -35,4 +37,5 @@ const title = "hej";
   <!-- <EmployeeContainer data={employeeData} /> -->
   <FinancialProjections />
   <Yellowcircles />
+  <CoreValues />
 </BaseLayout>
