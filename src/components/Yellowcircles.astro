@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+import Circles from "./Circles.astro";
+---
+
+<section>
+  <div>
+    <p>experience</p>
+    <h2>More than 25 years of experience</h2>
+    <p>3000+ our clients are insured around the World</p>
+  </div>
+  <div class="flex">
+    <div class="circle">
+      <Circles />
+      <h3>Consistency</h3>
+    </div>
+    <div class="circle"><Circles /><h3>Improvement</h3></div>
+    <div class="circle"><Circles /><h3>Branching</h3></div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--primary-01-yellow);
+    display: grid;
+    gap: 5.6rem;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 12.6rem;
+    padding-right: 12.6rem;
+    padding-top: 8.6rem;
+    padding-bottom: 8.6rem;
+  }
+  .flex {
+    display: flex;
+    gap: 1.6rem;
+
+    .circle {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+  }
+  section h2 {
+    font-size: var(--size-2);
+    text-wrap: pretty;
+    font-weight: 700;
+  }
+  p:first-child {
+    background-color: var(--secondary-02-white);
+    width: fit-content;
+    height: fit-content;
+    letter-spacing: 0.145rem;
+    text-transform: uppercase;
+    padding: 0rem 1rem;
+    border-radius: 2rem;
+  }
+</style>
