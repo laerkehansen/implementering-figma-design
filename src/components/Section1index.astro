@@ -35,6 +35,8 @@ import "../styles/global.css";
     gap: 5.125rem;
     justify-items: center;
     align-items: center;
+    margin-top: 9.3rem;
+    margin-bottom: 9.3rem;
   }
 
   .text_grid {
@@ -59,5 +61,52 @@ import "../styles/global.css";
 
   img {
     border-radius: 2rem;
+  }
+
+  .grid_1-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16.4rem;
+    height: 16.4rem;
+    background-image: radial-gradient(circle, #d4a473 2px, transparent 2px);
+    background-size: 20px 20px;
+    opacity: 0.7;
+    z-index: -1;
+    translate: 0px 520px;
+  }
+  .grid_1-1::after {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    bottom: -1rem;
+    background: green;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #595566;
+    max-width: 50ch;
+  }
+
+  li:before {
+    content: "";
+    width: 1.6rem;
+    aspect-ratio: 1;
+    background: var(--checkmark-icon) 50% 50% / contain no-repeat;
   }
 </style>

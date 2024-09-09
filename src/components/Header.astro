@@ -4,14 +4,14 @@ import Login from "./Login.astro";
 ---
 
 <header>
-  <div>
+  <div class="logo">
     <a href="/">AskExperts</a>
   </div>
   <ul>
-    <li>Home</li>
-    <li>Case Study</li>
-    <li>Team</li>
-    <li>About</li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/caseStudy">Case Study</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/about">About</a></li>
   </ul>
   <Login />
 </header>
@@ -37,11 +37,15 @@ import Login from "./Login.astro";
         list-style: none;
       }
     }
-
     a {
       text-decoration: none;
-      font-size: var(--size-1);
+      font-size: 1rem;
       color: var(--secondary-02-white);
     }
+  }
+  .logo a {
+    text-decoration: none;
+    font-size: var(--size-1);
+    color: var(--secondary-02-white);
   }
 </style>

@@ -1,0 +1,174 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="full">
+  <Icon name="fjernsyn" />
+  <h2>Financial Projections</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  </p>
+
+  <ul role="list">
+    <li>
+      <Icon name="sheet" />
+      <h3>The Balance Sheet</h3>
+      <p>
+        The Balance Sheet is a summary of the assets and liabilities and equity
+        of a business at a specific point of time.
+      </p>
+    </li>
+
+    <li>
+      <Icon name="creditcard" />
+      <h3>Income Statement</h3>
+      <p>
+        The Income (Profit and Loss) Statement, commonly referred to as the P&L
+        statement, summarizes the revenue and expenses for a specific time
+        period (one month, one quarter, one year, etc.)
+      </p>
+    </li>
+
+    <li>
+      <!-- <Icon name="house" /> -->
+      <h3>Financial Plan</h3>
+      <p>
+        Keep your information current and review the documents on a regular
+        basis (monthly or more often if needed). Review them with key
+        individuals within your company.
+      </p>
+    </li>
+
+    <li>
+      <!-- <Icon name="money" /> -->
+      <h3>Financial Ratios</h3>
+      <p>
+        Ratios are useful when comparing your company with the competition on
+        financial performance and also when benchmarking the performance of your
+        company.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<style>
+  :root {
+    --content-width: 50rem;
+  }
+  section {
+    padding-right: 12.5rem;
+    padding-left: 12.5rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    background-color: rgba(245, 245, 245, 1);
+  }
+
+  main {
+    padding-block: 4rem;
+    display: grid;
+    grid-template-columns:
+      [full-start]
+      1fr
+      [content]
+      minmax(0, var(--content-width))
+      1fr
+      [full-end];
+    column-gap: 1rem;
+
+    > * {
+      grid-column: content;
+    }
+
+    .full {
+      grid-column: full;
+      display: grid;
+      grid-template-columns: inherit;
+      row-gap: 3rem;
+
+      > * {
+        grid-column: content;
+      }
+
+      > ul {
+        scroll-snap-type: x mandatory;
+        grid-column: full;
+        padding-inline: max(1rem, 50% - var(--content-width) / 2);
+        padding-block-end: 1rem;
+
+        li {
+          scroll-snap-align: center;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+
+    li {
+      flex-basis: min(400px, 90%);
+      flex-shrink: 0;
+      background: #ebebeb;
+      color: #595566;
+      border-radius: 8px;
+      font-size: 1rem;
+      padding: 2.75rem 2.1875rem;
+      align-self: start;
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+      h3 {
+        font-weight: 700;
+        font-size: 1.5625rem;
+      }
+    }
+  }
+  svg {
+    max-width: fit-content;
+    margin-bottom: 1.5rem;
+
+    svg:hover {
+      fill: var(--primary-01-yellow);
+    }
+  }
+  svg:first-child {
+    max-width: 10%;
+  }
+
+  li:hover {
+    background-color: var(--primary-03-black);
+    p,
+    h3 {
+      color: var(--secondary-02-white);
+    }
+  }
+  h2,
+  h3 {
+    all: revert;
+    color: #181818;
+    margin-block: 0 0.625rem;
+    line-height: 1.125;
+  }
+
+  h2 {
+    font-size: 2.8125rem;
+    margin-bottom: var(--flow-space);
+  }
+  @layer component {
+    header {
+      color: #595566;
+
+      p {
+        max-inline-size: 67ch;
+        margin-bottom: var(--flow-space);
+      }
+    }
+  }
+</style>

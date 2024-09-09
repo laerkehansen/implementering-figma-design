@@ -2,6 +2,10 @@
 import "../styles/global.css";
 import EmployeeContainer from "../components/EmployeeContainer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const employeeData = await fetch(
+  "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
 ---
 
 <BaseLayout>
