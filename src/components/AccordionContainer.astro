@@ -1,0 +1,161 @@
+---
+import "../styles/global.css";
+---
+
+<section>
+  <div class="content">
+    <p>FAQ</p>
+    <h2>Customer Questions</h2>
+    <details name="a">
+      <summary>What will happen when I’ve sent my application?</summary>
+      <hr />
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+
+    <details name="a">
+      <summary>Can I get a free trial before I purchase?</summary>
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+
+    <details name="a">
+      <summary>What should I include in my personal statement?</summary>
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+
+    <details name="a">
+      <summary>Will membership plans be charged automatically?</summary>
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+
+    <details name="a">
+      <summary>What will happen when I’ve sent my application?</summary>
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+
+    <details name="a">
+      <summary>Can I get a free trial before I purchase?</summary>
+      <div>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </div>
+    </details>
+  </div>
+</section>
+
+<style>
+  ::backdrop {
+    background: #0004;
+    backdrop-filter: blur(4px);
+  }
+  .content {
+    grid-column: 2/3;
+    max-width: fit-content;
+    border-radius: 1.875rem;
+    background: #f5f5f5;
+    padding: 6.4375rem 10.75rem;
+    align-self: center;
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+
+    p:first-child {
+      background-color: var(--primary-02-green);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      border-radius: 2rem;
+    }
+    h2 {
+      font-size: var(--size-1);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: var(--flow-space);
+    }
+  }
+  details {
+    position: relative;
+    padding-bottom: 1rem;
+    max-width: fit-content;
+    margin-bottom: var(--flow-space);
+
+    & div {
+      max-width: 35rem;
+      margin-bottom: var(--flow-space);
+    }
+  }
+
+  details:not([open]) {
+    border-bottom: 1px solid #ccc; /* Tilføj en streg under */
+    max-width: fit-content;
+  }
+
+  summary {
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    padding-left: 20px; /* Skab plads til markøren */
+    font-size: var(--size--1);
+    grid-column: content;
+    max-width: fit-content;
+  }
+
+  summary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(45deg); /* Skab kryds-linjen */
+    transition: transform 0.5s ease; /* Smooth overgang */
+  }
+
+  summary::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg); /* Skab den anden linje i krydset */
+    transition: transform 0.3s ease; /* Smooth overgang */
+  }
+
+  summary[open]::before {
+    transform: rotate(0deg); /* Skab en lige streg ved åben */
+    max-width: fit-content;
+  }
+
+  summary[open]::after {
+    transform: rotate(0deg); /* Skjul den anden linje ved åben */
+    opacity: 0; /* Gør den usynlig */
+  }
+</style>

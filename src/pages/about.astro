@@ -5,6 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CoreValues from "../components/Core-values.astro";
 import EmployeeContainer from "../components/EmployeeContainer.astro";
 import ThreeEmployess from "../components/ThreeEmployess.astro";
+import AccordionContainer from "../components/AccordionContainer.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
@@ -18,4 +19,14 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   <CoreValues theme="greyMode" />
   <!-- <EmployeeContainer data={firstThreeEmployees} /> -->
   <ThreeEmployess />
+  <AccordionContainer exclusive="true" />
 </BaseLayout>
+
+<style>
+  main {
+    display: flex;
+    justify-content: center; /* Centrerer vandret */
+    align-items: center; /* Centrerer lodret */
+    min-height: 100vh;
+  }
+</style>
