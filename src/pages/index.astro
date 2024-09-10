@@ -17,6 +17,7 @@ import CoreValues from "../components/Core-values.astro";
 import { Icon } from "astro-icon/components";
 import ContactUs from "../components/ContactUs.astro";
 import Greybox from "../components/Greybox.astro";
+import IdeasIntoReality from "../components/IdeasIntoReality.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
@@ -41,4 +42,5 @@ const title = "hej";
   <Yellowcircles />
   <CoreValues />
   <ContactUs />
+  <IdeasIntoReality />
 </BaseLayout>
