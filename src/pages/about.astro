@@ -3,9 +3,19 @@ import "../styles/global.css";
 import IdeasIntoReality from "../components/IdeasIntoReality.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CoreValues from "../components/Core-values.astro";
+import EmployeeContainer from "../components/EmployeeContainer.astro";
+import ThreeEmployess from "../components/ThreeEmployess.astro";
+
+const employeeData = await fetch(
+  "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
+
+const firstThreeEmployees = employeeData.slice(0, 3);
 ---
 
 <BaseLayout>
   <IdeasIntoReality />
   <CoreValues theme="greyMode" />
+  <!-- <EmployeeContainer data={firstThreeEmployees} /> -->
+  <ThreeEmployess />
 </BaseLayout>
