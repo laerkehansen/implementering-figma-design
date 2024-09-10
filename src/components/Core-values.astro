@@ -1,9 +1,10 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+const { theme = "greyMode" } = Astro.props;
 ---
 
-<section>
+<section data-core={theme}>
   <div class="grid_1-1">
     <div class="">
       <p>Growing with our Clients</p>
@@ -117,5 +118,19 @@ import { Icon } from "astro-icon/components";
     padding: 0rem 1rem;
     color: var(--primary-03-black);
     border-radius: 2rem;
+  }
+
+  [data-core="greyMode"] {
+    background: #f5f5f5;
+    color: var(--primary-03-black);
+
+    section h2 {
+      color: var(--primary-03-black);
+    }
+
+    .link a {
+      background-color: var(--primary-03-black);
+      color: var(--secondary-02-white);
+    }
   }
 </style>
