@@ -1,0 +1,147 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<section>
+  <div>
+    <div>
+      <p class="button">Proccess</p>
+      <h2>Contact Us. It’s Easy.</h2>
+      <p>
+        Leverage agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster
+        collaborative.
+      </p>
+    </div>
+    <!-- <div> -->
+    <div class="content">
+      <div class="flex">
+        <div class="icon">
+          <Icon name="phone" class="icons" />
+        </div>
+        <div class="text">
+          <p>Call Today</p>
+          <h3>+1 800 100 900</h3>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="icon">
+          <Icon name="clock" class="icons" />
+        </div>
+        <div class="text">
+          <p>Call Today</p>
+          <h3>+1 800 100 900</h3>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="icon">
+          <Icon name="pointer" class="icons" />
+        </div>
+        <div class="text">
+          <p>Call Today</p>
+          <h3>+1 800 100 900</h3>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="grid_2-2">
+    <div class="picture1">
+      <img src="/src/assets/images/kroellet-dame.jpg" alt="dame med krøller" />
+    </div>
+    <div class="picture3">
+      <img
+        src="/src/assets/images/telefon-dame.jpg"
+        alt="kvinder ved en computer"
+      />
+    </div>
+    <div class="picture2">
+      <img src="/src/assets/images/heander.jpg" alt="kvinders hænder" />
+    </div>
+  </div>
+
+  <style>
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.3rem;
+      padding-left: 12.6rem;
+      padding-right: 12.6rem;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+
+        h3 {
+          font-weight: 700;
+        }
+      }
+    }
+    .button {
+      background-color: var(--primary-01-yellow);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      color: var(--primary-03-black);
+      border-radius: 2rem;
+    }
+    section {
+      padding-top: 8.6rem;
+    }
+    section h2 {
+      font-size: var(--size-2);
+      text-wrap: pretty;
+      font-weight: 700;
+    }
+
+    .content {
+      display: grid;
+      grid-template-rows: auto auto auto;
+    }
+
+    .grid_2-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      padding-top: 8.6rem;
+
+      img {
+        border-radius: 2rem;
+      }
+
+      .picture1 {
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        object-fit: cover;
+      }
+
+      .picture2 {
+        grid-column: 2/1/-1;
+        grid-row: 2/-1;
+        object-fit: cover;
+      }
+
+      .picture3 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        object-fit: cover;
+      }
+    }
+
+    .flex {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      .icons {
+        max-width: 30%;
+        margin-bottom: 1.38rem;
+      }
+    }
+  </style>
+</section>

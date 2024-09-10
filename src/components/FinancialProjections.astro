@@ -34,7 +34,7 @@ import { Icon } from "astro-icon/components";
     </li>
 
     <li>
-      <!-- <Icon name="house" /> -->
+      <Icon name="house" />
       <h3>Financial Plan</h3>
       <p>
         Keep your information current and review the documents on a regular
@@ -44,7 +44,7 @@ import { Icon } from "astro-icon/components";
     </li>
 
     <li>
-      <!-- <Icon name="money" /> -->
+      <Icon name="money" />
       <h3>Financial Ratios</h3>
       <p>
         Ratios are useful when comparing your company with the competition on
@@ -110,6 +110,15 @@ import { Icon } from "astro-icon/components";
     display: flex;
     gap: 1rem;
     overflow-x: auto;
+
+    [data-icon] {
+      & path {
+        fill: var(--primary-03-black);
+      }
+      li:hover & path {
+        fill: var(--primary-01-yellow);
+      }
+    }
 
     li {
       flex-basis: min(400px, 90%);

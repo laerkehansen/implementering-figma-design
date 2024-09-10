@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+---
+
+<div class="grid-1-1-1">
+  <div class="card">
+    <h3>Finance & Restructuring</h3>
+    <p>
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <a href="/team">Our Services</a>
+  </div>
+  <div class="card">
+    <h3>Finance & Restructuring</h3>
+    <p>
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <a href="/team">Our Services</a>
+  </div>
+  <div class="card">
+    <h3>Finance & Restructuring</h3>
+    <p>
+      Get help from Alex Moore, a professional business coach with advanced
+      experience on growth and business scaling.
+    </p>
+    <a href="/team">Our Services</a>
+  </div>
+</div>
+
+<style>
+  .card {
+    background-color: rgba(38, 38, 38, 0.9);
+    color: var(--secondary-02-white);
+    border-radius: 2rem;
+    max-width: fit-content;
+    padding: 2.8rem;
+
+    p {
+      margin-bottom: var(--flow-space);
+    }
+    h3 {
+      font-size: var(--size-0);
+    }
+    a {
+      background-color: var(--primary-03-black);
+      padding: 1rem;
+      color: var(--secondary-02-white);
+      text-decoration: none;
+      border-radius: 2rem;
+    }
+  }
+
+  .grid-1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+</style>

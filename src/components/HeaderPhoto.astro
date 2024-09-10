@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
+import Greybox from "./Greybox.astro";
 ---
 
-<div class="bigPhoto">
-  <div class="text_grid">
-    <div class="text_front">
+<section>
+  <div class="text_front">
+    <div class="text">
       <h1>Adam Buschemia Business Consultant</h1>
       <p>
         Get help from Alex Moore, a professional business coach with advanced
@@ -13,26 +14,40 @@ import "../styles/global.css";
       <a href="/src/pages/about">Book a Meeting</a>
     </div>
   </div>
-  <img src="src/assets/images/index.jpg" alt="" />
-</div>
-<style>
-  .bigPhoto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 
+  <img src="src/assets/images/index.jpg" alt="" />
+  <div class="greybox"><Greybox /></div>
+</section>
+<style>
+  .greybox {
+    grid-column: 2/-2;
+    grid-row: 3/-1;
+    z-index: 99;
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
   img {
     z-index: 3;
-  }
-  .text_grid {
+    grid-column: 4/-1;
+    grid-row: 1/4;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 100px));
-    grid-template-rows: repeat(3, auto);
+  }
+
+  .text_front {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 1/-2;
     gap: 1.25rem;
-    align-items: flex-start;
     background-color: var(--primary-03-black);
     color: var(--secondary-02-white);
-    z-index: 1;
+    h1 {
+      font-size: var(--size-2);
+      font-family: sans-serif;
+      color: var(--secondary-02-white);
+    }
     a {
       text-decoration: none;
       padding: 1rem 1.9375rem;
@@ -42,18 +57,10 @@ import "../styles/global.css";
       max-width: fit-content;
     }
 
-    h1 {
-      font-size: var(--size-2);
-      font-family: sans-serif;
-      color: var(--secondary-02-white);
+    .text {
+      grid-column: 3/3;
+      grid-row: 2/3;
     }
-  }
-
-  .text_front {
-    display: grid;
-    grid-column: 2/-1;
-    grid-row: 2/3;
-    gap: 1.25rem;
   }
   .text_grid::before {
     content: "";
