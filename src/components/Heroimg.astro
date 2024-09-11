@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+---
+
+<section>
+  <div class="img">
+    <img src="/src/assets/images/theconsultors.jpg" alt="Teamwork" />
+  </div>
+  <div class="content">
+    <p>Team</p>
+    <h2>The Consultors</h2>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+
+    p:first-child {
+      background-color: var(--primary-01-yellow);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      color: var(--primary-03-black);
+      border-radius: 2rem;
+    }
+    h2 {
+      font-size: var(--size-2);
+      font-weight: 700;
+    }
+  }
+  .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    color: var(--primary-03-black);
+    grid-column: 1/2;
+    padding: 3rem 3.75rem;
+    z-index: 97;
+    grid-row: 1;
+    height: fit-content;
+  }
+  .img {
+    grid-column: 1/4;
+    grid-row: 1;
+    z-index: 96;
+  }
+</style>

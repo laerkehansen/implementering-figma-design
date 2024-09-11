@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import EmployeeContainer from "../components/EmployeeContainer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Heroimg from "../components/Heroimg.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/employees.json"
@@ -9,5 +10,58 @@ const employeeData = await fetch(
 ---
 
 <BaseLayout>
-  <EmployeeContainer />
+  <Heroimg />
+  <section>
+    <div class="grid_1-1">
+      <div class="text-box">
+        <h2>Meet our team</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad
+          minim veniam, quis nostrud exercitation.
+        </p>
+      </div>
+      <div>
+        <p>Join our team</p>
+      </div>
+    </div>
+  </section>
+  <EmployeeContainer data={employeeData} />
 </BaseLayout>
+
+<style>
+  section {
+    padding-left: 12.6rem;
+    padding-right: 12.6rem;
+    padding-top: 6.6rem;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    justify-items: end;
+
+    h2 {
+      font-size: var(--size-2);
+      text-wrap: pretty;
+      font-weight: 700;
+    }
+
+    .link {
+      justify-items: end;
+      justify-self: end;
+    }
+  }
+  p:first-child {
+    background-color: var(--primary-03-black);
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 1rem;
+    color: var(--secondary-02-white);
+    border-radius: 2rem;
+  }
+
+  .text-box {
+    max-width: 40.1875rem;
+  }
+</style>
