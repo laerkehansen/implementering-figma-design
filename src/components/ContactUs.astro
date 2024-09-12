@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import DameMedKroeller from "../assets/images/kroellet-dame.jpg";
@@ -52,13 +53,13 @@ import KvinderHaender from "../assets/images/heander.jpg";
   </div>
   <div class="grid_2-2">
     <div class="picture1">
-      <img src={DameMedKroeller.src} alt="dame med krøller" />
+      <Image src={DameMedKroeller} alt="dame med krøller" />
     </div>
     <div class="picture3">
-      <img src={KvinderVedComputer.src} alt="kvinder ved en computer" />
+      <Image src={KvinderVedComputer} alt="kvinder ved en computer" />
     </div>
     <div class="picture2">
-      <img src={KvinderHaender.src} alt="kvinders hænder" />
+      <Image src={KvinderHaender} alt="kvinders hænder" />
     </div>
   </div>
 </section>

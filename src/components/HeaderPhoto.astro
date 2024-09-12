@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
 import Greybox from "./Greybox.astro";
 import Sarah from "../assets/images/index.jpg";
 ---
@@ -16,7 +17,7 @@ import Sarah from "../assets/images/index.jpg";
     </div>
   </div>
 
-  <img src={Sarah.src} alt="sarah" />
+  <Image src={Sarah} alt="sarah" />
   <div class="greybox"><Greybox /></div>
 </section>
 <style>

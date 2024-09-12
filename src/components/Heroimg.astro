@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
 import TheConsultors from "../assets/images/theconsultors.jpg";
 ---
 
 <section>
   <div class="img">
-    <img src={TheConsultors.src} alt="Teamwork" />
+    <Image src={TheConsultors} alt="Teamwork" />
   </div>
   <div class="content">
     <p>Team</p>
