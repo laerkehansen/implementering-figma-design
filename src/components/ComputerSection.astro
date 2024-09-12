@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
 import Computer from "../assets/images/computer.jpg";
+import { Image } from "astro:assets";
 ---
 
 <section>
-  <img src={Computer.src} alt="computer med kode" />
+  <Image src={Computer} alt="computer med kode" />
   <div class="content-section">
     <div class="flex">
       <h3>Case Name</h3>
