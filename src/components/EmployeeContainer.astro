@@ -15,4 +15,24 @@ const { data } = Astro.props;
     justify-content: center;
     container-type: inline-size;
   }
+
+  @media (max-width: 1199px) {
+    section {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 400px));
+      justify-items: center;
+      justify-content: center;
+      container-type: inline-size;
+    }
+  }
+
+  @media (max-width: 900px) {
+    section {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 400px));
+      justify-items: center;
+      justify-content: center;
+      container-type: inline-size;
+    }
+  }
 </style>

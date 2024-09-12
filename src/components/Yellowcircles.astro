@@ -4,7 +4,7 @@ import Circles from "./Circles.astro";
 ---
 
 <section>
-  <div>
+  <div class="text">
     <p>experience</p>
     <h2>More than 25 years of experience</h2>
     <p>3000+ our clients are insured around the World</p>
@@ -20,41 +20,120 @@ import Circles from "./Circles.astro";
 </section>
 
 <style>
-  section {
-    background-color: var(--primary-01-yellow);
-    display: grid;
-    gap: 5.6rem;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 12.6rem;
-    padding-right: 12.6rem;
-    padding-top: 8.6rem;
-    padding-bottom: 8.6rem;
-  }
-  .flex {
-    display: flex;
-    gap: 1.6rem;
-
-    .circle {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+  @media (min-width: 1240px) {
+    section {
+      background-color: var(--primary-01-yellow);
+      display: grid;
+      gap: 5.6rem;
+      grid-template-columns: auto auto;
       align-items: center;
+      justify-content: space-evenly;
+      padding-left: 12.6rem;
+      padding-right: 12.6rem;
+      padding-top: 8.6rem;
+      padding-bottom: 8.6rem;
+    }
+    .flex {
+      display: flex;
+      gap: 1.6rem;
+
+      .circle {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    section h2 {
+      font-size: var(--size-2);
+      text-wrap: pretty;
+      font-weight: 700;
+    }
+    p:first-child {
+      background-color: var(--secondary-02-white);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      border-radius: 2rem;
     }
   }
-  section h2 {
-    font-size: var(--size-2);
-    text-wrap: pretty;
-    font-weight: 700;
+
+  @media (max-width: 1239px) {
+    section {
+      background-color: var(--primary-01-yellow);
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-content: space-evenly;
+      padding-left: 12.6rem;
+      padding-right: 12.6rem;
+      padding-top: 8.6rem;
+      padding-bottom: 8.6rem;
+    }
+
+    .text {
+      grid-row: 1/2;
+    }
+
+    .flex {
+      grid-row: 2/-1;
+      display: flex;
+      gap: 1.6rem;
+      justify-content: center;
+    }
+    section h2 {
+      font-size: var(--size-2);
+      text-wrap: pretty;
+      font-weight: 700;
+    }
+    p:first-child {
+      background-color: var(--secondary-02-white);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      border-radius: 2rem;
+    }
   }
-  p:first-child {
-    background-color: var(--secondary-02-white);
-    width: fit-content;
-    height: fit-content;
-    letter-spacing: 0.145rem;
-    text-transform: uppercase;
-    padding: 0rem 1rem;
-    border-radius: 2rem;
+  @media (max-width: 800px) {
+    section {
+      background-color: var(--primary-01-yellow);
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .text {
+      grid-row: 1/2;
+    }
+
+    .flex {
+      grid-row: 2 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      justify-content: center;
+      align-items: center;
+    }
+    section h2 {
+      font-size: var(--size-2);
+      text-wrap: pretty;
+      font-weight: 700;
+    }
+    p:first-child {
+      background-color: var(--secondary-02-white);
+      width: fit-content;
+      height: fit-content;
+      letter-spacing: 0.145rem;
+      text-transform: uppercase;
+      padding: 0rem 1rem;
+      border-radius: 2rem;
+    }
   }
 </style>

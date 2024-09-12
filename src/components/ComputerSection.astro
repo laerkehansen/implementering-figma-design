@@ -1,0 +1,149 @@
+---
+import "../styles/global.css";
+---
+
+<section>
+  <img src="/src/assets/images/computer.jpg" alt="computer med kode" />
+  <div class="content-section">
+    <div class="flex">
+      <h3>Case Name</h3>
+      <p>Taxes & Efficiency</p>
+    </div>
+    <div>
+      <h3>Category</h3>
+      <p>Business</p>
+    </div>
+    <div>
+      <h3>Date</h3>
+      <p>27th September 2022</p>
+    </div>
+    <div class="btn">
+      <a href="#">Live Preview</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .content-section {
+    background-color: var(--primary-03-black);
+    color: var(--secondary-02-white);
+    display: flex;
+    gap: 6.25rem;
+    padding: 3.3125rem 3.75rem;
+    max-width: 64.25rem;
+    border-radius: 1.875rem;
+    position: relative;
+    grid-row: 4/-1;
+    grid-column: 1/-1;
+    align-items: center;
+    h3 {
+      font-weight: 700;
+      font-size: var(--size--1);
+    }
+
+    a {
+      color: var(--primary-03-black);
+      background-color: var(--primary-01-yellow);
+      border-radius: 2rem;
+      padding: 1rem 2.0625rem;
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 76.75rem;
+    border-radius: 1rem;
+    grid-row: 1/5;
+    grid-column: 1/-1;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  @media (max-width: 1199px) {
+    section {
+      display: grid;
+      justify-items: center;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: 1fr;
+    }
+    .content-section {
+      background-color: var(--primary-03-black);
+      color: var(--secondary-02-white);
+      display: flex;
+      gap: 5rem;
+      padding: 3.3125rem 3.75rem;
+      max-width: fit-content;
+      border-radius: 1.875rem;
+      position: relative;
+      grid-row: 4/-1;
+      grid-column: 1/-1;
+      align-items: flex-start;
+      h3 {
+        font-weight: 700;
+        font-size: var(--size--1);
+      }
+
+      a {
+        color: var(--primary-03-black);
+        background-color: var(--primary-01-yellow);
+        border-radius: 2rem;
+        padding: 0.5rem 1.0625rem;
+        text-decoration: none;
+        max-width: 50%;
+      }
+    }
+    .btn {
+      max-width: fit-content;
+      text-wrap: nowrap;
+    }
+  }
+
+  @media (max-width: 800px) {
+    section {
+      display: grid;
+      justify-items: center;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: 1fr;
+    }
+    .content-section {
+      background-color: var(--primary-03-black);
+      color: var(--secondary-02-white);
+      display: flex;
+      gap: 5rem;
+      padding: 3.3125rem 3.75rem;
+      max-width: fit-content;
+      border-radius: 1.875rem;
+      position: relative;
+      grid-row: 4/-1;
+      grid-column: 1/-1;
+      align-items: flex-start;
+      h3 {
+        font-weight: 700;
+        font-size: var(--size--1);
+      }
+
+      a {
+        color: var(--primary-03-black);
+        background-color: var(--primary-01-yellow);
+        border-radius: 2rem;
+        padding: 0.5rem 1.0625rem;
+        text-decoration: none;
+        max-width: 50%;
+      }
+    }
+    .btn {
+      max-width: fit-content;
+      text-wrap: nowrap;
+    }
+  }
+</style>
