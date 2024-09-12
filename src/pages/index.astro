@@ -32,6 +32,10 @@ const projectionsdata = await fetch(
 ).then((res) => res.json());
 
 const title = "hej";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/*.{jpeg,jpg,png,gif}"
+);
 ---
 
 <BaseLayout title={title}>
