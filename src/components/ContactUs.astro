@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+import DameMedKroeller from "../assets/images/kroellet-dame.jpg";
+import KvinderVedComputer from "../assets/images/telefon-dame.jpg";
+import telefonDame from "../../dist/chunks/telefon-dame_W65cpTh8.mjs";
+import KvinderHaender from "../assets/images/heander.jpg";
 ---
 
 <section>
@@ -48,16 +52,13 @@ import { Icon } from "astro-icon/components";
   </div>
   <div class="grid_2-2">
     <div class="picture1">
-      <img src="/src/assets/images/kroellet-dame.jpg" alt="dame med krøller" />
+      <img src={DameMedKroeller.src} alt="dame med krøller" />
     </div>
     <div class="picture3">
-      <img
-        src="/src/assets/images/telefon-dame.jpg"
-        alt="kvinder ved en computer"
-      />
+      <img src={KvinderVedComputer.src} alt="kvinder ved en computer" />
     </div>
     <div class="picture2">
-      <img src="/src/assets/images/heander.jpg" alt="kvinders hænder" />
+      <img src={KvinderHaender.src} alt="kvinders hænder" />
     </div>
   </div>
 </section>

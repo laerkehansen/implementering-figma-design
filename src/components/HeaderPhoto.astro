@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Greybox from "./Greybox.astro";
+import Sarah from "../assets/images/index.jpg";
 ---
 
 <section>
@@ -11,11 +12,11 @@ import Greybox from "./Greybox.astro";
         Get help from Alex Moore, a professional business coach with advanced
         experience on growth and business scaling.
       </p>
-      <a href="/src/pages/about">Book a Meeting</a>
+      <a href="/about">Book a Meeting</a>
     </div>
   </div>
 
-  <img src="src/assets/images/index.jpg" alt="sarah" />
+  <img src={Sarah.src} alt="sarah" />
   <div class="greybox"><Greybox /></div>
 </section>
 <style>
