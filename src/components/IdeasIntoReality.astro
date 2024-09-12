@@ -1,12 +1,12 @@
 ---
 import "../styles/global.css";
 import { Image } from "astro:assets";
-// import Teamwork from "../assets/images/teamwork.jpg";
+import Teamwork from "../../public/images/teamwork.jpg";
 ---
 
 <div class="grid_1-1">
   <div class="img">
-    <img src="/teamwork.jpg" alt="mand i fokus" />
+    <Image src={Teamwork} alt="mand i fokus" />
   </div>
   <div class="text_grid">
     <p>OUR VISION</p>

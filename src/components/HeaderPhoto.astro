@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import Greybox from "./Greybox.astro";
-// import Sarah from "../assets/images/index.jpg";
+import Sarah from "../../public/index.jpg";
 ---
 
 <section>
@@ -17,7 +17,7 @@ import Greybox from "./Greybox.astro";
     </div>
   </div>
 
-  <img src="/index.jpg" alt="sarah" />
+  <Image src={Sarah} alt="sarah" />
   <div class="greybox"><Greybox /></div>
 </section>
 <style>
