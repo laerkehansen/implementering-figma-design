@@ -31,7 +31,7 @@ const projectionsdata = await fetch(
   "https://raw.githubusercontent.com/daviatkea/frontend-design/main/resources/json/projections.json"
 ).then((res) => res.json());
 
-const title = "hej";
+const title = "Figma design";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/*.{jpeg,jpg,png,gif}"
